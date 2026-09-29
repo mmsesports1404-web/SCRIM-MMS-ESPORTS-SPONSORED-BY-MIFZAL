@@ -351,32 +351,31 @@
 
         // Send to WhatsApp Function
         function sendToWhatsApp() {
-            playClickSound();
-            const team = teamNameInput.value.trim();
-            const time = scrimTimeInput.value.trim();
-            const format = scrimFormatInput.value.trim();
-            const average = scrimAverageInput.value.trim();
+    playClickSound();
+    const team = teamNameInput.value.trim();
+    const time = scrimTimeInput.value.trim();
+    const format = scrimFormatInput.value.trim();
+    const average = scrimAverageInput.value.trim();
 
-            if(!team || !time || !format || !average) {
-                showToast("Sila lengkapkan semua maklumat borang scrim!", true);
-                return;
-            }
+    if (!team || !time || !format || !average) {
+        showToast("Sila lengkapkan semua maklumat borang!");
+        return;
+    }
 
-            const rawText = 
-`SCRIM ORDER BY MMS ESPORTS MALAYSIA
+    const rawText = `🎮 *SCRIM ORDER BY MMS ESPORTS MALAYSIA*
 SPONSORED BY MIFZAL
 
-NAME TEAM: ${team}
-TIME: ${time}
-FORMAT: ${format}
-AVERAGE: ${average}
+👥 *NAME TEAM:* ${team}
+⏰ *TIME:* ${time}
+🏆 *FORMAT:* ${format}
+⭐ *AVERAGE:* ${average}
 
-DM WHATSAPP: 0178153522`;
+📱 *DM WHATSAPP:* 0178153522`;
 
-            const encodedText = encodeURIComponent(rawText);
-            const whatsappUrl = `https://wa.me/60178153522?text=${encodedText}`;
-            
-            window.open(whatsappUrl, '_blank');
+    const encodedText = encodeURIComponent(rawText);
+    const whatsappUrl = `https://wa.me/60178153522?text=${encodedText}`;
+
+    window.open(whatsappUrl, '_blank');
         }
 
         // Copy Text to Clipboard
