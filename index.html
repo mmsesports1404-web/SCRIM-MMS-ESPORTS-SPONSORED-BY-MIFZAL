@@ -94,9 +94,59 @@
     <!-- SEKSYEN HEADER (LOGO & SPONSORED BANNER) -->
     <div class="text-center my-6">
         <!-- Logo MMS Esports -->
-        <div class="inline-block p-1 rounded-full logo-glow mb-3 bg-black/60">
-            <img src="https://i.ibb.co/3s4Gpx0/mms-logo.jpg" alt="MMS Esports Logo" class="w-24 h-24 rounded-full object-cover" onerror="this.src='logo.jpg'">
-        </div>
+        <svg viewBox="0 0 400 450" class="w-28 h-28 mx-auto drop-shadow-[0_0_15px_rgba(212,175,55,0.6)]" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- Kecerunan Warna Emas Mahkota -->
+        <linearGradient id="crownGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#F3E5AB" />
+            <stop offset="50%" stop-color="#D4AF37" />
+            <stop offset="100%" stop-color="#AA7C11" />
+        </linearGradient>
+        <!-- Kecerunan Perisai (Putih / Kelabu) -->
+        <linearGradient id="shieldLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#E6E6E6" />
+            <stop offset="100%" stop-color="#FFFFFF" />
+        </linearGradient>
+        <linearGradient id="shieldRight" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#D0D0D0" />
+            <stop offset="100%" stop-color="#B8B8B8" />
+        </linearGradient>
+    </defs>
+
+    <!-- 1. MAHKOTA EMAS (CROWN) -->
+    <g transform="translate(0, -10)">
+        <!-- Bentuk Mahkota -->
+        <path d="M 65 180 L 110 100 L 160 160 L 200 70 L 240 160 L 290 100 L 335 180 C 270 178, 130 178, 65 180 Z" fill="url(#crownGrad)" />
+        <!-- Bulatan Atas Mahkota -->
+        <circle cx="110" cy="95" r="8" fill="#F3E5AB" />
+        <circle cx="160" cy="155" r="7" fill="#F3E5AB" />
+        <circle cx="200" cy="65" r="10" fill="#FFF" />
+        <circle cx="240" cy="155" r="7" fill="#F3E5AB" />
+        <circle cx="290" cy="95" r="8" fill="#F3E5AB" />
+    </g>
+
+    <!-- 2. PERISAI UTAMA (SHIELD) -->
+    <g transform="translate(0, 5)">
+        <!-- Latar Perisai Separuh Kiri (Putih Terang) -->
+        <path d="M 60 175 L 200 175 L 200 380 L 60 295 Z" fill="url(#shieldLeft)" />
+        <!-- Latar Perisai Separuh Kanan (Kelabu Bayang) -->
+        <path d="M 200 175 L 340 175 L 340 295 L 200 380 Z" fill="url(#shieldRight)" />
+        <!-- Bingkai Luar Perisai -->
+        <path d="M 60 175 L 200 175 L 340 175 L 340 295 L 200 380 L 60 295 Z" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" />
+    </g>
+
+    <!-- 3. HURUF MONOGRAM (M M S) -->
+    <g fill="#12131A">
+        <!-- Huruf M Kiri -->
+        <path d="M 75 190 L 105 190 L 125 240 L 145 190 L 175 190 L 175 315 L 150 300 L 150 230 L 133 275 L 117 275 L 100 230 L 100 315 L 75 300 Z" />
+        
+        <!-- Huruf M Tengah -->
+        <path d="M 182 190 L 200 190 L 218 190 L 235 245 L 252 190 L 270 190 L 270 325 L 250 337 L 250 235 L 230 285 L 218 285 L 198 235 L 198 307 L 182 297 Z" />
+        
+        <!-- Huruf S Kanan -->
+        <path d="M 280 190 L 325 190 L 325 215 L 298 215 L 298 235 L 325 245 C 325 245, 325 295, 325 295 L 280 320 L 280 295 L 305 280 L 305 265 L 280 255 Z" />
+    </g>
+        </svg>
 
         <!-- Teks Nama Esports -->
         <h2 class="text-gray-300 font-rajdhani font-bold text-lg tracking-widest uppercase">SCRIM</h2>
@@ -289,7 +339,7 @@
                 return;
             }
 
-            const rawText = `🔥 *SCRIM ORDER BY MMS ESPORTS MALAYSIA* 🔥\n👑 *SPONSORED BY MIFZAL* 👑\n\n📌 *NAME TEAM:* ${team}\n⏰ *TIME:* ${time}\n⚔️ *FORMAT:* ${format}\n⭐ *AVERAGE:* ${average}\n\n📲 *DM WHATSAPP:* 0178153522`;
+            const rawText = `🔥 *SCRIM ORDER BY MMS ESPORTS MALAYSIA* 🔥\n👑 *SPONSORED BY MIFZAL* 👑\n\n📌 *NAME TEAM:* ${team}\n⏰ *TIME:* ${time}\n⚔️ *FORMAT:* ${format}\n⭐ *AVERAGE:* ${average}\n\n📲 *DM WHATSAPP:* SUPERBRAIN`;
 
             const encodedText = encodeURIComponent(rawText);
             window.location.href = `https://wa.me/60178153522?text=${encodedText}`;
