@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="ms" class="dark">
+<html lang="ms">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCRIM BY MMS ESPORTS MALAYSIA | SPONSORED BY MIFZAL</title>
+    <title>SCRIM ORDER FORM - MMS ESPORTS</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Rajdhani:wght@600;700;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600&family=Rajdhani:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -31,360 +30,150 @@
             }
         }
     </script>
-    
     <style>
-        body {
-            background-color: #08080C;
-            font-family: 'Rajdhani', sans-serif;
-            color: #ffffff;
-            overflow-x: hidden;
-        }
-
-        /* Hero Background Overlay */
-        .poster-bg {
-            background-image: linear-gradient(to bottom, rgba(8, 8, 12, 0.75), rgba(8, 8, 12, 0.95)), url('1000167597_6278a1.jpg');
-            background-size: cover;
-            background-position: center top;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
-
-        /* Fallback if local file not found in preview frame */
-        .poster-bg-fallback {
-            background-image: linear-gradient(to bottom, rgba(8, 8, 12, 0.85), rgba(8, 8, 12, 0.98)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1600&auto=format&fit=crop');
-        }
-
-        /* Neon Glow Utility */
-        .glow-red {
-            text-shadow: 0 0 10px rgba(255, 11, 58, 0.8), 0 0 20px rgba(255, 11, 58, 0.5), 0 0 30px rgba(255, 11, 58, 0.3);
-        }
-
-        .glow-gold {
-            text-shadow: 0 0 10px rgba(212, 175, 55, 0.8), 0 0 20px rgba(212, 175, 55, 0.5);
-        }
-
-        .box-glow-red {
-            box-shadow: 0 0 25px -5px rgba(255, 11, 58, 0.4);
-        }
-
-        .box-glow-gold {
-            box-shadow: 0 0 20px -5px rgba(212, 175, 55, 0.3);
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #08080C;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #FF0B3A;
-            border-radius: 4px;
-        }
-
-        /* Pulsing Crown Animation */
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) scale(1); }
-            50% { transform: translateY(-6px) scale(1.05); }
-        }
-        .animate-float {
-            animation: float 3s ease-in-out infinite;
-        }
-
-        /* Cyberpunk angled clips */
-        .clip-corner {
-            clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
-        }
-
-        .clip-button {
-            clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
-        }
+        body { background-color: #0a0a0f; color: #ffffff; font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="poster-bg min-h-screen flex flex-col justify-between relative selection:bg-red-600 selection:text-white">
+<body class="p-4 max-w-md mx-auto">
 
-    <!-- Particle Overlay Effect Canvas -->
-    <canvas id="particlesCanvas" class="fixed inset-0 pointer-events-none z-0 opacity-40"></canvas>
-
-    <header class="relative z-10 pt-8 pb-4 px-4 text-center">
-        <div class="max-w-4xl mx-auto flex flex-col items-center">
-            
-            <div class="flex items-center gap-3 mb-3 animate-float relative group">
-                <div class="absolute -inset-1 bg-gradient-to-r from-amber-500 via-red-600 to-amber-500 rounded-full blur-md opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
-                <div class="relative w-28 h-28 md:w-36 md:h-36 bg-black/90 rounded-full p-3 border-2 border-amber-400 box-glow-gold flex items-center justify-center overflow-hidden">
-                    <img src="https://lh3.googleusercontent.com/d/1P--Zv7-_7TBMS7G9EQFzbtvVI7vOo5vA" 
-                         alt="MMS Esports Official Crown Shield Logo" 
-                         class="w-full h-full object-cover rounded-full scale-150 filter drop-shadow-[0_0_12px_rgba(212,175,55,0.8)]">
-                </div>
-            </div>
-                SCRIM <span class="text-red-500">BY MMS ESPORTS</span> MALAYSIA
+    <!-- HEADER / FORM TITLE -->
+    <div class="bg-esports-card p-4 rounded-xl border border-red-900/50 mb-4 shadow-lg">
+        <div class="flex justify-between items-center mb-4">
+            <h1 class="text-2xl font-bold font-rajdhani text-white flex items-center gap-2">
+                🎮 SCRIM ORDER FORM
             </h1>
-            
-            <!-- Sponsor Badge -->
-            <div class="mt-2 inline-flex items-center gap-2 px-6 py-1.5 bg-gradient-to-r from-red-950/80 via-black to-red-950/80 border-y-2 border-amber-400 clip-corner shadow-lg">
-                <i class="fa-solid font-bold fa-crown text-amber-400 text-sm animate-pulse"></i>
-                <span class="font-rajdhani font-black tracking-widest text-lg md:text-xl text-amber-300 uppercase glow-gold">
-                    SPONSORED BY MIFZAL
-                </span>
-                <i class="fa-solid font-bold fa-crown text-amber-400 text-sm animate-pulse"></i>
+            <span class="bg-red-900/40 text-red-400 text-xs px-2 py-1 rounded font-bold">MLBB 5V5</span>
+        </div>
+
+        <form id="scrimForm" onsubmit="return false;" class="space-y-4">
+            <div>
+                <label class="block text-xs font-bold text-gray-400 mb-1">👥 NAME TEAM *</label>
+                <input type="text" id="teamNameInput" placeholder="Contoh: KANIKAMA ESPORTS" class="w-full bg-black/50 border border-gray-800 rounded p-2.5 text-sm text-white focus:outline-none focus:border-red-500">
             </div>
 
-            <!-- Subheading Motto -->
-            <p class="mt-3 text-xs md:text-sm font-semibold tracking-widest text-gray-300 uppercase flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-red-600 animate-ping"></span>
-                ONE TEAM • ONE DREAM • MOBILE LEGENDS BANG BANG
-            </p>
-        </div>
-    </header>
-
-    <main class="relative z-10 flex-grow px-4 py-6 max-w-5xl mx-auto w-full">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            
-            <!-- FORM SECTION (SCRIM ORDER) -->
-            <div class="lg:col-span-7 bg-black/75 backdrop-blur-md border-2 border-red-600/60 rounded-xl p-6 md:p-8 box-glow-red relative clip-corner">
-                
-                <!-- Corner Accent Marks -->
-                <div class="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-amber-400"></div>
-                <div class="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-amber-400"></div>
-                <div class="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-amber-400"></div>
-                <div class="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-amber-400"></div>
-
-                <div class="flex items-center justify-between border-b border-red-900/50 pb-4 mb-6">
-                    <h2 class="font-teko text-3xl md:text-4xl font-bold tracking-wide text-white flex items-center gap-3">
-                        <i class="fa-solid fa-gamepad text-red-500"></i>
-                        SCRIM ORDER FORM
-                    </h2>
-                    <span class="text-xs font-bold px-2.5 py-1 bg-red-600/30 text-red-400 border border-red-500/40 rounded uppercase tracking-wider">
-                        MLBB 5v5
-                    </span>
+            <div class="grid grid-cols-2 gap-2">
+                <div>
+                    <label class="block text-xs font-bold text-gray-400 mb-1">⏰ TIME *</label>
+                    <input type="text" id="scrimTimeInput" placeholder="9:00 PM" class="w-full bg-black/50 border border-gray-800 rounded p-2.5 text-sm text-white focus:outline-none focus:border-red-500">
                 </div>
-
-                <form id="scrimForm" class="space-y-5">
-                    
-                    <!-- Team Name Input -->
-                    <div>
-                        <label class="block font-rajdhani font-bold text-gray-200 text-sm tracking-wider uppercase mb-1" for="teamName">
-                            <i class="fa-solid fa-users text-red-500 mr-2"></i>NAME TEAM *
-                        </label>
-                        <div class="relative">
-                            <input type="text" id="teamName" placeholder="Contoh: MMS ESPORTS ALPHA" required
-                                class="w-full bg-zinc-950/90 border-2 border-zinc-700/80 focus:border-red-500 focus:ring-1 focus:ring-red-500 rounded-lg px-4 py-3 text-white placeholder-gray-500 outline-none transition font-semibold">
-                        </div>
-                    </div>
-
-                    <!-- Time Selection -->
-                    <div>
-                        <label class="block font-rajdhani font-bold text-gray-200 text-sm tracking-wider uppercase mb-1" for="scrimTime">
-                            <i class="fa-solid fa-clock text-red-500 mr-2"></i>TIME *
-                        </label>
-                        <div class="grid grid-cols-2 gap-3">
-                            <input type="text" id="scrimTime" placeholder="Contoh: 9:00 PM / MALAM" required
-                                class="bg-zinc-950/90 border-2 border-zinc-700/80 focus:border-red-500 focus:ring-1 focus:ring-red-500 rounded-lg px-4 py-3 text-white placeholder-gray-500 outline-none transition font-semibold">
-                            
-                            <!-- Quick Time Selector -->
-                            <select id="quickTimeSelect" onchange="applyQuickTime(this.value)" class="bg-zinc-900 border-2 border-zinc-700/80 text-gray-300 rounded-lg px-3 py-3 font-semibold focus:border-red-500 outline-none">
-                                <option value="">Masa Pantas...</option>
-                                <option value="8:00 PM">8:00 PM</option>
-                                <option value="9:00 PM">9:00 PM</option>
-                                <option value="10:00 PM">10:00 PM</option>
-                                <option value="11:00 PM">11:00 PM</option>
-                                <option value="12:00 AM">12:00 AM</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- Format Selection -->
-                    <div>
-                        <label class="block font-rajdhani font-bold text-gray-200 text-sm tracking-wider uppercase mb-1" for="scrimFormat">
-                            <i class="fa-solid fa-trophy text-red-500 mr-2"></i>FORMAT *
-                        </label>
-                        <div class="grid grid-cols-3 gap-2 mb-2">
-                            <button type="button" onclick="setFormat('BO3')" class="format-btn bg-zinc-900 hover:bg-red-950/60 border border-zinc-700 hover:border-red-500 py-2 rounded text-xs font-bold transition">BO3</button>
-                            <button type="button" onclick="setFormat('BO5')" class="format-btn bg-zinc-900 hover:bg-red-950/60 border border-zinc-700 hover:border-red-500 py-2 rounded text-xs font-bold transition">BO5</button>
-                            <button type="button" onclick="setFormat('BO7')" class="format-btn bg-zinc-900 hover:bg-red-950/60 border border-zinc-700 hover:border-red-500 py-2 rounded text-xs font-bold transition">BO7</button>
-                        </div>
-                        <input type="text" id="scrimFormat" placeholder="Sila pilih di atas atau taip (e.g. BO3 / BO5)" required
-                            class="w-full bg-zinc-950/90 border-2 border-zinc-700/80 focus:border-red-500 focus:ring-1 focus:ring-red-500 rounded-lg px-4 py-3 text-white placeholder-gray-500 outline-none transition font-semibold">
-                    </div>
-
-                    <!-- Average Rank/Stars -->
-                    <div>
-                        <label class="block font-rajdhani font-bold text-gray-200 text-sm tracking-wider uppercase mb-1" for="scrimAverage">
-                            <i class="fa-solid fa-star text-amber-400 mr-2"></i>AVERAGE (STARS / RANK) *
-                        </label>
-                        <input type="text" id="scrimAverage" placeholder="Contoh: Average 150+ Stars / Mythic Immortal" required
-                            class="w-full bg-zinc-950/90 border-2 border-zinc-700/80 focus:border-red-500 focus:ring-1 focus:ring-red-500 rounded-lg px-4 py-3 text-white placeholder-gray-500 outline-none transition font-semibold">
-                        <p class="text-xs text-amber-400/80 mt-1 font-sans">⚡ Requirement standard MMS Esports: 100+ Stars ke atas.</p>
-                    </div>
-
-                </form>
+                <div>
+                    <label class="block text-xs font-bold text-gray-400 mb-1">PILIHAN MASA</label>
+                    <select onchange="document.getElementById('scrimTimeInput').value = this.value; updatePreview();" class="w-full bg-black/50 border border-gray-800 rounded p-2.5 text-sm text-white focus:outline-none">
+                        <option value="8:00 PM">8:00 PM</option>
+                        <option value="9:00 PM" selected>9:00 PM</option>
+                        <option value="10:00 PM">10:00 PM</option>
+                        <option value="11:00 PM">11:00 PM</option>
+                    </select>
+                </div>
             </div>
 
-            <div class="lg:col-span-5 space-y-6">
-                
-                <!-- PREVIEW BOX -->
-                <div class="bg-zinc-950/85 border-2 border-amber-500/50 rounded-xl p-6 box-glow-gold relative clip-corner">
-                    <div class="flex items-center justify-between mb-4 border-b border-amber-500/30 pb-3">
-                        <h3 class="font-teko text-2xl font-bold tracking-wide text-amber-400 flex items-center gap-2">
-                            <i class="fa-brands fa-whatsapp text-green-500 text-2xl"></i>
-                            FORMAT DM WHATSAPP
-                        </h3>
-                        <span class="text-[10px] uppercase tracking-widest px-2 py-0.5 bg-amber-500/20 text-amber-300 rounded font-mono">
-                            Auto Sync
-                        </span>
-                    </div>
-
-                    <!-- Generated Message Box -->
-                    <div class="bg-black/90 p-4 rounded-lg border border-zinc-800 font-mono text-sm leading-relaxed text-gray-200 whitespace-pre-wrap selection:bg-amber-500 selection:text-black relative" id="previewText">
-                        <!-- Filled by JS dynamically -->
-                    </div>
-
-                    <!-- Direct Actions -->
-                    <div class="mt-5 space-y-3">
-                        <button onclick="sendToWhatsApp()" type="button"
-                            class="w-full py-4 px-6 bg-gradient-to-r from-green-600 via-emerald-600 to-green-600 hover:from-green-500 hover:to-emerald-500 text-white font-rajdhani font-black text-xl tracking-wider uppercase rounded-lg shadow-lg transform active:scale-95 transition flex items-center justify-center gap-3 clip-button group">
-                            <i class="fa-brands fa-whatsapp text-2xl group-hover:animate-bounce"></i>
-                            HANTAR ORDER KE WHATSAPP
-                        </button>
-
-                        <button onclick="copyToClipboard()" type="button"
-                            class="w-full py-2.5 px-4 bg-zinc-800 hover:bg-zinc-700 text-gray-300 font-bold text-sm tracking-wide rounded-lg border border-zinc-600 transition flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-copy"></i>
-                            SALIN TEKS FORMAT SCRIM
-                        </button>
-                    </div>
+            <div>
+                <label class="block text-xs font-bold text-gray-400 mb-1">🏆 FORMAT *</label>
+                <div class="grid grid-cols-3 gap-2 mb-2">
+                    <button type="button" onclick="setFormat('BO3')" class="bg-black/50 border border-gray-800 py-1.5 rounded text-xs font-bold text-gray-300 hover:border-red-500">BO3</button>
+                    <button type="button" onclick="setFormat('BO5')" class="bg-black/50 border border-gray-800 py-1.5 rounded text-xs font-bold text-gray-300 hover:border-red-500">BO5</button>
+                    <button type="button" onclick="setFormat('BO7')" class="bg-black/50 border border-gray-800 py-1.5 rounded text-xs font-bold text-gray-300 hover:border-red-500">BO7</button>
                 </div>
-
-                <!-- DIRECT CONTACT BANNER -->
-                <div class="bg-gradient-to-r from-red-950/80 via-black to-zinc-900 border border-red-600/40 rounded-xl p-5 text-center shadow-lg">
-                    <p class="text-xs uppercase font-bold tracking-widest text-gray-400">DIRECT DM WHATSAPP CONTACT</p>
-                    <p class="font-teko text-3xl font-black tracking-wider text-amber-400 mt-0.5">
-                        <i class="fa-solid fa-phone text-red-500 text-xl mr-2"></i>0178153522
-                    </p>
-                    <a href="https://wa.me/60178153522" target="_blank" class="inline-block mt-2 text-xs font-bold text-red-400 hover:text-red-300 underline tracking-wider">
-                        Klik sini untuk terus chat 0178153522 &rarr;
-                    </a>
-                </div>
-
-                <!-- Toast Alert Container -->
-                <div id="toast" class="hidden fixed bottom-6 right-6 bg-red-600 text-white font-bold px-6 py-3 rounded-lg shadow-2xl border-2 border-white/20 z-50 flex items-center gap-3 animate-pulse">
-                    <i class="fa-solid fa-circle-check text-xl"></i>
-                    <span id="toastMsg">Teks berjaya disalin!</span>
-                </div>
-
+                <input type="text" id="scrimFormatInput" value="BO3" class="w-full bg-black/50 border border-gray-800 rounded p-2.5 text-sm text-white focus:outline-none focus:border-red-500">
             </div>
-        </div>
-    </main>
 
-    <footer class="relative z-10 border-t border-red-950/80 bg-black/90 py-4 px-4 text-center mt-8">
-        <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-gray-400">
-            <p class="font-semibold">&copy; 2026 MMS ESPORTS MALAYSIA. ALL RIGHTS RESERVED.</p>
-            <p class="text-amber-400/80 font-bold uppercase tracking-wider">SPONSORED BY MIFZAL</p>
-        </div>
-    </footer>
+            <div>
+                <label class="block text-xs font-bold text-gray-400 mb-1">⭐ AVERAGE (STARS / RANK) *</label>
+                <input type="text" id="scrimAverageInput" placeholder="100+ Star" class="w-full bg-black/50 border border-gray-800 rounded p-2.5 text-sm text-white focus:outline-none focus:border-red-500">
+                <p class="text-[10px] text-yellow-500 mt-1">⚡ Requirement standard MMS Esports: 100+ Stars ke atas.</p>
+            </div>
+        </form>
+    </div>
 
+    <!-- PREVIEW & WHATSAPP SECTION -->
+    <div class="bg-esports-card p-4 rounded-xl border border-yellow-600/40 shadow-lg space-y-3">
+        <div class="flex justify-between items-center">
+            <h2 class="text-yellow-500 font-bold font-rajdhani flex items-center gap-2">
+                <i class="fab fa-whatsapp text-green-500"></i> FORMAT DM WHATSAPP
+            </h2>
+            <span class="bg-yellow-500/20 text-yellow-400 text-[10px] px-2 py-0.5 rounded font-mono">AUTO SYNC</span>
+        </div>
+
+        <!-- TEXTAREA PREVIEW -->
+        <textarea id="previewText" readonly rows="8" class="w-full bg-black/70 border border-gray-800 rounded p-3 text-xs font-mono text-gray-300 focus:outline-none resize-none"></textarea>
+
+        <!-- BUTANG HANTAR WHATSAPP -->
+        <button type="button" onclick="sendToWhatsApp()" class="w-full bg-emerald-500 hover:bg-emerald-600 text-black font-extrabold py-3 rounded-lg flex items-center justify-center gap-2 text-sm transition shadow-lg shadow-emerald-900/30">
+            <i class="fab fa-whatsapp text-lg"></i> HANTAR ORDER KE WHATSAPP
+        </button>
+
+        <!-- BUTANG SALIN TEKS -->
+        <button type="button" onclick="copyFormatText()" class="w-full bg-gray-800 hover:bg-gray-700 text-gray-200 font-bold py-2.5 rounded-lg text-xs flex items-center justify-center gap-2 transition">
+            <i class="far fa-copy"></i> SALIN TEKS FORMAT SCRIM
+        </button>
+    </div>
+
+    <!-- FOOTER DIRECT DM -->
+    <div class="mt-4 p-4 text-center border border-red-900/30 rounded-xl bg-black/40">
+        <p class="text-xs text-gray-400">DIRECT DM WHATSAPP CONTACT</p>
+        <p class="text-xl font-bold text-red-500 font-rajdhani my-1"><i class="fas fa-phone-alt text-sm mr-1"></i> 0178153522</p>
+        <a href="https://wa.me/60178153522" target="_blank" class="text-xs text-red-400 underline hover:text-red-300">Klik sini untuk terus chat 0178153522 →</a>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
     <script>
-        // Form Inputs References
-        const teamNameInput = document.getElementById('teamName');
-        const scrimTimeInput = document.getElementById('scrimTime');
-        const scrimFormatInput = document.getElementById('scrimFormat');
-        const scrimAverageInput = document.getElementById('scrimAverage');
+        const teamNameInput = document.getElementById('teamNameInput');
+        const scrimTimeInput = document.getElementById('scrimTimeInput');
+        const scrimFormatInput = document.getElementById('scrimFormatInput');
+        const scrimAverageInput = document.getElementById('scrimAverageInput');
         const previewText = document.getElementById('previewText');
 
-        // Audio Click Generator using Web Audio API
-        function playClickSound() {
-            try {
-                const ctx = new (window.AudioContext || window.webkitAudioContext)();
-                const osc = ctx.createOscillator();
-                const gain = ctx.createGain();
-                osc.type = 'triangle';
-                osc.frequency.setValueAtTime(440, ctx.currentTime);
-                osc.frequency.exponentialRampToValueAtTime(880, ctx.currentTime + 0.08);
-                gain.gain.setValueAtTime(0.15, ctx.currentTime);
-                gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.08);
-                osc.connect(gain);
-                gain.connect(ctx.destination);
-                osc.start();
-                osc.stop(ctx.currentTime + 0.08);
-            } catch(e) {
-                // Audio Context fallback
-            }
-        }
-
-        // Quick Format Helper
         function setFormat(val) {
-            playClickSound();
             scrimFormatInput.value = val;
             updatePreview();
         }
 
-        // Quick Time Helper
-        function applyQuickTime(val) {
-            if(val) {
-                playClickSound();
-                scrimTimeInput.value = val;
-                updatePreview();
-            }
-        }
+        function updatePreview() {
+            const team = teamNameInput.value.trim() || '____';
+            const time = scrimTimeInput.value.trim() || '____';
+            const format = scrimFormatInput.value.trim() || '____';
+            const average = scrimAverageInput.value.trim() || '____';
 
-        
-        // Real-time Preview Text Generation
-    function updatePreview() {
-        const team = teamNameInput.value.trim() || '____';
-        const time = scrimTimeInput.value.trim() || '____';
-        const format = scrimFormatInput.value.trim() || '____';
-        const average = scrimAverageInput.value.trim() || '____';
+            const formattedMessage = `🔥 *SCRIM ORDER BY MMS ESPORTS MALAYSIA* 🔥\n👑 *SPONSORED BY MIFZAL* 👑\n\n📌 *NAME TEAM:* ${team}\n⏰ *TIME:* ${time}\n⚔️ *FORMAT:* ${format}\n⭐ *AVERAGE:* ${average}\n\n📲 *DM WHATSAPP:* 0178153522`;
 
-        const formattedMessage = `🔥 *SCRIM ORDER BY MMS ESPORTS MALAYSIA* 🔥
-👑 *SPONSORED BY MIFZAL* 👑
-
-📌 *NAME TEAM:* ${team}
-⏰ *TIME:* ${time}
-⚔️ *FORMAT:* ${format}
-⭐ *AVERAGE:* ${average}
-
-📲 *DM WHATSAPP:* 0178153522`;
-
-        if (previewText) {
-            if (previewText.tagName === 'TEXTAREA') {
+            if (previewText) {
                 previewText.value = formattedMessage;
-            } else {
-                previewText.textContent = formattedMessage;
             }
         }
-    }
 
-    // Send to WhatsApp Function
-    function sendToWhatsApp() {
-        if (typeof playClickSound === 'function') playClickSound();
+        function sendToWhatsApp() {
+            const team = teamNameInput.value.trim();
+            const time = scrimTimeInput.value.trim();
+            const format = scrimFormatInput.value.trim();
+            const average = scrimAverageInput.value.trim();
 
-        const team = teamNameInput.value.trim();
-        const time = scrimTimeInput.value.trim();
-        const format = scrimFormatInput.value.trim();
-        const average = scrimAverageInput.value.trim();
-
-        if (!team || !time || !format || !average) {
-            if (typeof showToast === 'function') {
-                showToast("Sila lengkapkan semua maklumat borang!");
-            } else {
+            if (!team || !time || !format || !average) {
                 alert("Sila lengkapkan semua maklumat borang!");
+                return;
             }
-            return;
+
+            const rawText = `🔥 *SCRIM ORDER BY MMS ESPORTS MALAYSIA* 🔥\n👑 *SPONSORED BY MIFZAL* 👑\n\n📌 *NAME TEAM:* ${team}\n⏰ *TIME:* ${time}\n⚔️ *FORMAT:* ${format}\n⭐ *AVERAGE:* ${average}\n\n📲 *DM WHATSAPP:* 0178153522`;
+
+            const encodedText = encodeURIComponent(rawText);
+            window.location.href = `https://wa.me/60178153522?text=${encodedText}`;
         }
 
-        const rawText = `🔥 *SCRIM ORDER BY MMS ESPORTS MALAYSIA* 🔥
-👑 *SPONSORED BY MIFZAL* 👑
-
-📌 *NAME TEAM:* ${team}
-⏰ *TIME:* ${time}
-⚔️ *FORMAT:* ${format}
-⭐ *AVERAGE:* ${average}
-
-📲 *DM WHATSAPP:* 0178153522`;
-
-        const encodedText = encodeURIComponent(rawText);
-        window.location.href = `https://wa.me/60178153522?text=${encodedText}`;
+        function copyFormatText() {
+            previewText.select();
+            navigator.clipboard.writeText(previewText.value);
+            alert("Format SCRIM berjaya disalin!");
         }
-        // Copy Text to Clipboard
-   
+
+        // Event Listeners
+        [teamNameInput, scrimTimeInput, scrimFormatInput, scrimAverageInput].forEach(input => {
+            if (input) {
+                input.addEventListener('input', updatePreview);
+                input.addEventListener('change', updatePreview);
+            }
+        });
+
+        // Jana preview awal
+        updatePreview();
+    </script>
+</body>
+            </html>
