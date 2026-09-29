@@ -37,59 +37,65 @@
             font-family: 'Inter', sans-serif; 
             position: relative;
             min-height: 100vh;
+            overflow-x: hidden;
         }
 
-        /* Styling Video Background */
-        #bgVideo {
+        /* ANIMASI LATAR BELAKANG MOVING GRID & PARTICLES */
+        #bgCanvas {
             position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
-            object-fit: cover;
             z-index: -2;
+            background: radial-gradient(circle at center, #1a050d 0%, #0a0a0f 100%);
         }
 
-        /* Lapisan Gelap (Overlay) */
+        /* LAPISAN OVERLAY GLOW */
         .video-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: rgba(10, 10, 15, 0.80);
-            backdrop-filter: blur(3px);
+            background: rgba(10, 10, 15, 0.65);
+            backdrop-filter: blur(2px);
             z-index: -1;
         }
 
-        /* Kesan Cahaya Emas pada Logo */
+        /* CAHAYA EMAS PADA LOGO */
         .logo-glow {
-            box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.7);
             border: 2px solid #D4AF37;
+            animation: pulseGlow 3s infinite alternate;
         }
-<!-- Logo MMS Esports -->
-<div class="inline-block p-1 rounded-full logo-glow mb-3 bg-black/60">
-    <img src="logo.jpg" alt="MMS Esports Logo" class="w-24 h-24 rounded-full object-cover">
-</div>
-        
+
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); }
+            100% { box-shadow: 0 0 30px rgba(255, 11, 58, 0.8); }
+        }
+
+        /* LENCANA SPONSORED BANNER */
+        .sponsored-banner {
+            background: linear-gradient(90deg, rgba(139, 0, 0, 0.9) 0%, rgba(212, 175, 55, 0.4) 50%, rgba(139, 0, 0, 0.9) 100%);
+            border: 1px solid #D4AF37;
+            clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
         }
     </style>
 </head>
 <body class="p-4 max-w-md mx-auto">
 
-    <!-- VIDEO BACKGROUND BERGERAK -->
-    <video autoplay muted loop playsinline id="bgVideo">
-        <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-digital-grid-loop-41559-large.mp4" type="video/mp4">
-    </video>
+    <!-- CANVAS ANIMASI LATAR BELAKANG BERGERAK -->
+    <canvas id="bgCanvas"></canvas>
 
     <!-- LAPISAN OVERLAY GELAP -->
     <div class="video-overlay"></div>
 
     <!-- SEKSYEN HEADER (LOGO & SPONSORED BANNER) -->
     <div class="text-center my-6">
-        <!-- Logo MMS Esports dengan Gambar Anda -->
+        <!-- Logo MMS Esports -->
         <div class="inline-block p-1 rounded-full logo-glow mb-3 bg-black/60">
-            <img src="https://raw.githubusercontent.com/mmsesports1404-web/SCRIM-MMS/main/logo.jpg" alt="MMS Esports Logo" class="w-24 h-24 rounded-full object-cover">
+            <img src="https://raw.githubusercontent.com/mmsesports1404-web/SCRIM-MMS/main/logo.jpg" alt="MMS Esports Logo" class="w-24 h-24 rounded-full object-cover" onerror="this.src='logo.jpg';">
         </div>
 
         <!-- Teks Nama Esports -->
@@ -122,7 +128,7 @@
         <form id="scrimForm" onsubmit="return false;" class="space-y-4">
             <div>
                 <label class="block text-xs font-bold text-gray-400 mb-1">👥 NAME TEAM *</label>
-                <input type="text" id="teamNameInput" placeholder="Contoh: MMS ESPORTS ALPHA" class="w-full bg-black/50 border border-gray-800 rounded p-2.5 text-sm text-white focus:outline-none focus:border-red-500">
+                <input type="text" id="teamNameInput" placeholder="Contoh: MMS ESPORTS" class="w-full bg-black/50 border border-gray-800 rounded p-2.5 text-sm text-white focus:outline-none focus:border-red-500">
             </div>
 
             <div class="grid grid-cols-2 gap-2">
@@ -190,8 +196,64 @@
         <a href="https://wa.me/60178153522" target="_blank" class="text-xs text-red-400 underline hover:text-red-300">Klik sini untuk terus chat 0178153522 →</a>
     </div>
 
-    <!-- JAVASCRIPT LOGIC -->
+    <!-- JAVASCRIPT LOGIC & ANIMASI -->
     <script>
+        // Animasi Canvas Particles/Grid Background
+        const canvas = document.getElementById('bgCanvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        for (let i = 0; i < 40; i++) {
+            particles.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                radius: Math.random() * 2 + 1,
+                color: Math.random() > 0.5 ? '#FF0B3A' : '#D4AF37',
+                vx: (Math.random() - 0.5) * 0.8,
+                vy: (Math.random() - 0.5) * 0.8
+            });
+        }
+
+        function animateBg() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw grid
+            ctx.strokeStyle = 'rgba(255, 11, 58, 0.05)';
+            ctx.lineWidth = 1;
+            const gridSize = 40;
+            for (let x = 0; x < canvas.width; x += gridSize) {
+                ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, canvas.height); ctx.stroke();
+            }
+            for (let y = 0; y < canvas.height; y += gridSize) {
+                ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(canvas.width, y); ctx.stroke();
+            }
+
+            // Draw particles
+            particles.forEach(p => {
+                p.x += p.vx;
+                p.y += p.vy;
+
+                if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                ctx.fillStyle = p.color;
+                ctx.fill();
+            });
+
+            requestAnimationFrame(animateBg);
+        }
+        animateBg();
+
+        // Borang Logic
         const teamNameInput = document.getElementById('teamNameInput');
         const scrimTimeInput = document.getElementById('scrimTimeInput');
         const scrimFormatInput = document.getElementById('scrimFormatInput');
@@ -227,7 +289,7 @@
                 return;
             }
 
-            const rawText = `🔥 *SCRIM ORDER BY MMS ESPORTS MALAYSIA* 🔥\n👑 *SPONSORED BY MIFZAL* 👑\n\n📌 *NAME TEAM:* ${team}\n⏰ *TIME:* ${time}\n⚔️️ *FORMAT:* ${format}\n⭐ *AVERAGE:* ${average}\n\n📲 *DM WHATSAPP:* 0178153522`;
+            const rawText = `🔥 *SCRIM ORDER BY MMS ESPORTS MALAYSIA* 🔥\n👑 *SPONSORED BY MIFZAL* 👑\n\n📌 *NAME TEAM:* ${team}\n⏰ *TIME:* ${time}\n⚔️ *FORMAT:* ${format}\n⭐ *AVERAGE:* ${average}\n\n📲 *DM WHATSAPP:* 0178153522`;
 
             const encodedText = encodeURIComponent(rawText);
             window.location.href = `https://wa.me/60178153522?text=${encodedText}`;
@@ -239,7 +301,6 @@
             alert("Format SCRIM berjaya disalin!");
         }
 
-        // Event Listeners
         [teamNameInput, scrimTimeInput, scrimFormatInput, scrimAverageInput].forEach(input => {
             if (input) {
                 input.addEventListener('input', updatePreview);
@@ -247,8 +308,7 @@
             }
         });
 
-        // Jana preview awal
         updatePreview();
     </script>
 </body>
-                        </html>
+    </html>
