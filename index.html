@@ -122,29 +122,29 @@
     <div class="scanlines fixed inset-0 z-50"></div>
 
     <!-- Navigation Bar -->
-    <nav class="fixed top-0 left-0 w-full z-40 bg-black/90 backdrop-blur-md border-b border-red-900/50 py-3 px-4">
+    <nav class="fixed top-0 left-0 w-full z-40 bg-black/80 backdrop-blur-md border-b border-red-900/50 py-3 px-6">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             
-            <a href="#hero" class="sound-click flex items-center gap-2 group">
-                <img src="ManaManaSandar%2020260825_220527.jpg" alt="Logo MMS Esports" style="width: 42px; height: 42px; border-radius: 50%; object-fit: cover; border: 2px solid #ef4444;" class="logo-pulse">
+            <a href="index.html" class="sound-click flex items-center gap-3 group">
+                <img src="ManaManaSandar%2020260825_220527.jpg" alt="Logo MMS Esports" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid #ef4444;" class="logo-pulse">
                 <div class="flex flex-col">
-                    <span class="font-teko text-2xl font-bold text-white leading-none">MMS <span class="text-red-600">LEGENDS</span></span>
-                    <span class="text-[9px] tracking-widest text-red-400/80 -mt-1 font-semibold uppercase">MLBB ESPORTS</span>
+                    <span class="font-teko text-3xl font-bold text-white leading-none">MMS <span class="text-red-600">LEGENDS</span></span>
+                    <span class="text-[10px] tracking-widest text-red-400/80 -mt-1 font-semibold uppercase">Mobile Legends Bang Bang</span>
                 </div>
             </a>
 
-            <!-- Navigasi Menu Telefon & PC -->
-            <div class="flex items-center space-x-3 sm:space-x-6 font-bold text-xs sm:text-sm tracking-wider">
-                <a href="#lineup" class="sound-click text-gray-300 hover:text-red-500 transition">LINEUP</a>
-                <a href="scrim.html" class="sound-click bg-red-950/80 border border-red-600/80 text-red-400 px-2.5 py-1 rounded box-glow-red hover:bg-red-900 transition">🔥 SCRIM</a>
-                <a href="tryout.html" class="sound-click bg-red-950/80 border border-red-600/80 text-red-400 px-2.5 py-1 rounded box-glow-red hover:bg-red-900 transition">⚡ TRYOUT</a>
+            <!-- Navigasi 3 Halaman -->
+            <div class="hidden md:flex items-center space-x-8 font-bold text-lg tracking-wider">
+                <a href="index.html" class="sound-click text-red-500 border-b-2 border-red-600 pb-1">MMS LEGENDS</a>
+                <a href="scrim.html" class="sound-click hover:text-red-500 transition text-gray-300">SCRIM</a>
+                <a href="tryout.html" class="sound-click hover:text-red-500 transition text-gray-300">TRYOUT</a>
             </div>
 
             <!-- Sound Toggle -->
-            <div class="hidden sm:flex items-center gap-4">
+            <div class="flex items-center gap-4">
                 <button id="sound-toggle" class="sound-click bg-red-950/60 border border-red-600/50 hover:bg-red-900 text-red-400 px-3 py-1.5 rounded flex items-center gap-2 text-xs uppercase tracking-wider font-bold transition box-glow-red">
                     <i id="sound-icon" class="fas fa-volume-up text-red-500"></i>
-                    <span id="sound-text">ON</span>
+                    <span id="sound-text">Sound: ON</span>
                 </button>
             </div>
         </div>
@@ -152,15 +152,15 @@
 
     <!-- Hero Section -->
     <section id="hero" class="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-4 overflow-hidden">
-        <div class="absolute w-[350px] h-[350px] bg-red-600/20 rounded-full blur-[100px] pointer-events-none top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute w-[500px] h-[500px] bg-red-600/20 rounded-full blur-[120px] pointer-events-none top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
 
         <div class="relative z-10 text-center max-w-4xl mx-auto">
             <div class="mb-6 inline-block relative group sound-click cursor-pointer">
                 <div class="absolute -inset-1 bg-gradient-to-r from-red-600 to-red-900 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000"></div>
-                <img src="ManaManaSandar%2020260825_220527.jpg" alt="Logo MMS Esports" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid #ef4444;" class="relative logo-pulse shadow-2xl">
+                <img src="ManaManaSandar%2020260825_220527.jpg" alt="Logo MMS Esports" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 3px solid #ef4444;" class="relative logo-pulse shadow-2xl">
             </div>
 
-            <div class="inline-flex items-center gap-2 px-4 py-1 bg-red-950/80 border border-red-600/60 rounded-full mb-4 box-glow-red">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-red-950/80 border border-red-600/60 rounded-full mb-4 box-glow-red">
                 <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
                 <span class="text-xs font-bold uppercase tracking-widest text-red-300">Official Squad 2026</span>
             </div>
@@ -169,19 +169,13 @@
                 MMS <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-red-600 to-rose-700 glow-red">LEGENDS</span>
             </h1>
             
-            <p class="text-base md:text-2xl text-red-200/90 font-bold uppercase tracking-widest max-w-2xl mx-auto mb-8 drop-shadow px-2">
+            <p class="text-lg md:text-2xl text-red-200/90 font-bold uppercase tracking-widest max-w-2xl mx-auto mb-8 drop-shadow">
                 "Pantang Undur, Kuasai Land of Dawn!"
             </p>
 
-            <div class="flex flex-wrap justify-center gap-3">
-                <a href="#lineup" class="sound-click bg-gradient-to-r from-red-600 via-red-700 to-red-900 text-white font-bold text-sm md:text-lg px-6 py-3 rounded uppercase tracking-widest box-glow-red-lg transition transform hover:-translate-y-1">
-                    <i class="fas fa-users"></i> Lihat Lineup
-                </a>
-                <a href="scrim.html" class="sound-click bg-black/80 border-2 border-red-600 text-red-400 font-bold text-sm md:text-lg px-6 py-3 rounded uppercase tracking-widest box-glow-red transition transform hover:-translate-y-1">
-                    <i class="fas fa-gamepad"></i> Tempah Scrim
-                </a>
-                <a href="tryout.html" class="sound-click bg-black/80 border-2 border-red-600 text-red-400 font-bold text-sm md:text-lg px-6 py-3 rounded uppercase tracking-widest box-glow-red transition transform hover:-translate-y-1">
-                    <i class="fas fa-user-plus"></i> Sertai Tryout
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#lineup" class="sound-click bg-gradient-to-r from-red-600 via-red-700 to-red-900 text-white font-bold text-lg px-8 py-3.5 rounded-none uppercase tracking-widest box-glow-red-lg transition transform hover:-translate-y-1">
+                    <i class="fas fa-crosshairs"></i> Lihat Lineup
                 </a>
             </div>
         </div>
@@ -275,7 +269,7 @@
         </div>
 
         <!-- RESERVE -->
-        <div class="mt-12 bg-black/60 border border-red-900/60 p-6 md:p-8 box-glow-red max-w-2xl mx-auto">
+        <div class="mt-12 bg-black/60 border border-red-900/60 p-8 box-glow-red max-w-2xl mx-auto">
             <h3 class="text-2xl font-bold font-teko text-red-500 uppercase text-center mb-6"><i class="fas fa-user-shield"></i> RESERVE PLAYER</h3>
             <div class="sound-click player-card bg-crimson-gradient border border-red-800/80 p-6 flex items-center justify-between cursor-pointer">
                 <div class="flex items-center gap-4">
@@ -287,12 +281,12 @@
                         <p class="text-xs text-red-400 font-semibold uppercase">ROAMER (Sub)</p>
                     </div>
                 </div>
-                <span class="bg-yellow-950/80 text-yellow-400 border border-yellow-600/50 text-xs font-bold px-3 py-1 uppercase">RESERVE</span>
+                <span class="bg-yellow-950/80 text-yellow-400 border border-yellow-600/50 text-xs font-bold px-4 py-1.5 uppercase">RESERVE</span>
             </div>
         </div>
     </section>
 
-    <!-- PENGURUSAN -->
+    <!-- MANAGEMENT & SPONSOR -->
     <section id="management" class="relative py-20 px-4 bg-black/80 border-t border-b border-red-950 z-10">
         <div class="max-w-7xl mx-auto text-center">
             <h2 class="text-5xl md:text-7xl font-bold font-teko uppercase text-white mb-12">PENGURUSAN <span class="text-red-600 glow-red">& SPONSOR</span></h2>
@@ -316,7 +310,7 @@
 
     <!-- Footer -->
     <footer class="bg-black border-t border-red-900/60 py-8 px-4 text-center relative z-10">
-        <img src="ManaManaSandar%2020260825_220527.jpg" alt="Logo MMS Esports" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid #ef4444;" class="mx-auto mb-3 logo-pulse">
+        <img src="ManaManaSandar%2020260825_220527.jpg" alt="Logo MMS Esports" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid #ef4444;" class="mx-auto mb-3 logo-pulse">
         <p class="text-xs text-gray-500 uppercase tracking-widest">&copy; 2026 MMS LEGENDS Esports. All Rights Reserved.</p>
     </footer>
 
@@ -366,10 +360,348 @@
         });
 
         const soundBtn = document.getElementById('sound-toggle');
-        if (soundBtn) {
-            soundBtn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                soundEnabled = !soundEnabled;
-                document.getElementById('sound-icon').className = soundEnabled ? 'fas fa-volume-up text-red-500' : 'fas fa-volume-mute text-gray-500';
-                document.getElementById('sound-text').innerText = soundEnabled ? 'ON' : 'OFF';
-                if(soundEnabled) playPopSound()
+        soundBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            soundEnabled = !soundEnabled;
+            document.getElementById('sound-icon').className = soundEnabled ? 'fas fa-volume-up text-red-500' : 'fas fa-volume-mute text-gray-500';
+            document.getElementById('sound-text').innerText = soundEnabled ? 'Sound: ON' : 'Sound: OFF';
+            if(soundEnabled) playPopSound();
+        });
+
+        // Embers Canvas
+        const canvas = document.getElementById('embers-canvas');
+        const ctx = canvas.getContext('2d');
+        function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        const embers = Array.from({length: 50}, () => ({
+            x: Math.random() * canvas.width,
+            y: canvas.height + Math.random() * 100,
+            size: Math.random() * 3 + 1,
+            speedY: Math.random() * 1.5 + 0.5,
+            speedX: (Math.random() - 0.5) * 0.8,
+            opacity: Math.random() * 0.8 + 0.2,
+            color: Math.random() > 0.3 ? '#ff003c' : '#ff7700'
+        }));
+
+        function animateEmbers() {
+            ctx.clearRect(0, 0
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCRIM ORDER FORM - MMS ESPORTS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600&family=Rajdhani:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        esports: {
+                            red: '#FF0B3A',
+                            darkRed: '#8B0000',
+                            gold: '#D4AF37',
+                            bg: '#0A0A0F',
+                            card: '#12131A'
+                        }
+                    },
+                    fontFamily: {
+                        teko: ['Teko', 'sans-serif'],
+                        rajdhani: ['Rajdhani', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { 
+            background-color: #0a0a0f; 
+            color: #ffffff; 
+            font-family: 'Inter', sans-serif; 
+            position: relative;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ANIMASI LATAR BELAKANG MOVING GRID & PARTICLES */
+        #bgCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -2;
+            background: radial-gradient(circle at center, #1a050d 0%, #0a0a0f 100%);
+        }
+
+        /* LAPISAN OVERLAY GLOW */
+        .video-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(10, 10, 15, 0.65);
+            backdrop-filter: blur(2px);
+            z-index: -1;
+        }
+
+        /* CAHAYA EMAS PADA LOGO */
+        .logo-glow {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.7);
+            border: 2px solid #D4AF37;
+            animation: pulseGlow 3s infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); }
+            100% { box-shadow: 0 0 30px rgba(255, 11, 58, 0.8); }
+        }
+
+        /* LENCANA SPONSORED BANNER */
+        .sponsored-banner {
+            background: linear-gradient(90deg, rgba(139, 0, 0, 0.9) 0%, rgba(212, 175, 55, 0.4) 50%, rgba(139, 0, 0, 0.9) 100%);
+            border: 1px solid #D4AF37;
+            clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
+        }
+    </style>
+</head>
+<body class="p-4 max-w-md mx-auto">
+
+    <!-- CANVAS ANIMASI LATAR BELAKANG BERGERAK -->
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- LAPISAN OVERLAY GELAP -->
+    <div class="video-overlay"></div>
+
+    <!-- SEKSYEN HEADER (LOGO & SPONSORED BANNER) -->
+    <div class="text-center my-6">
+        <!-- Logo MMS Esports -->
+        <div class="flex justify-center items-center my-3">
+            <div class="w-24 h-24 rounded-full p-1 logo-glow bg-black/60 flex items-center justify-center overflow-hidden">
+                <img src="https://i.ibb.co/CjdcBK8/Mana-Mana-Sama-Sahaja.jpg" alt="MMS Esports Logo" class="w-full h-full object-cover rounded-full">
+            </div>
+        </div>
+
+        <!-- Teks Nama Esports -->
+        <h2 class="text-gray-300 font-rajdhani font-bold text-lg tracking-widest uppercase">SCRIM</h2>
+        <h3 class="text-red-500 font-rajdhani font-extrabold text-xl tracking-wider">BY MMS ESPORTS</h3>
+        <p class="text-gray-200 font-rajdhani font-bold text-sm tracking-widest mb-3">MALAYSIA</p>
+
+        <!-- Lencana Sponsored By Mifzal -->
+        <div class="sponsored-banner py-1.5 px-6 my-2 inline-block shadow-lg">
+            <p class="text-yellow-400 font-rajdhani font-bold text-sm tracking-wider flex items-center justify-center gap-2">
+                👑 <span>SPONSORED BY MIFZAL</span> 👑
+            </p>
+        </div>
+
+        <!-- Slogan -->
+        <p class="text-[10px] text-gray-400 font-semibold tracking-widest uppercase mt-2">
+            ONE TEAM · ONE DREAM · MOBILE LEGENDS BANG BANG
+        </p>
+    </div>
+
+    <!-- HEADER / FORM TITLE -->
+    <div class="bg-esports-card/90 backdrop-blur-md p-4 rounded-xl border border-red-900/50 mb-4 shadow-lg">
+        <div class="flex justify-between items-center mb-4">
+            <h1 class="text-2xl font-bold font-rajdhani text-white flex items-center gap-2">
+                🎮 SCRIM ORDER FORM
+            </h1>
+            <span class="bg-red-900/40 text-red-400 text-xs px-2 py-1 rounded font-bold">MLBB 5V5</span>
+        </div>
+
+        <form id="scrimForm" onsubmit="return false;" class="space-y-4">
+            <div>
+                <label class="block text-xs font-bold text-gray-400 mb-1">👥 NAME TEAM *</label>
+                <input type="text" id="teamNameInput" placeholder="Contoh: MMS ESPORTS" class="w-full bg-black/50 border border-gray-800 rounded p-2.5 text-sm text-white focus:outline-none focus:border-red-500">
+            </div>
+
+            <div class="grid grid-cols-2 gap-2">
+                <div>
+                    <label class="block text-xs font-bold text-gray-400 mb-1">⏰ TIME *</label>
+                    <input type="text" id="scrimTimeInput" placeholder="Contoh: 9:00 PM / MALAM" class="w-full bg-black/50 border border-gray-800 rounded p-2.5 text-sm text-white focus:outline-none focus:border-red-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-gray-400 mb-1">PILIHAN MASA</label>
+                    <select onchange="document.getElementById('scrimTimeInput').value = this.value; updatePreview();" class="w-full bg-black/50 border border-gray-800 rounded p-2.5 text-sm text-white focus:outline-none">
+                        <option value="" disabled selected>Masa Pantas...</option>
+                        <option value="8:00 PM">8:00 PM</option>
+                        <option value="9:00 PM">9:00 PM</option>
+                        <option value="10:00 PM">10:00 PM</option>
+                        <option value="11:00 PM">11:00 PM</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-xs font-bold text-gray-400 mb-1">🏆 FORMAT *</label>
+                <div class="grid grid-cols-3 gap-2 mb-2">
+                    <button type="button" onclick="setFormat('BO3')" class="bg-black/50 border border-gray-800 py-1.5 rounded text-xs font-bold text-gray-300 hover:border-red-500">BO3</button>
+                    <button type="button" onclick="setFormat('BO5')" class="bg-black/50 border border-gray-800 py-1.5 rounded text-xs font-bold text-gray-300 hover:border-red-500">BO5</button>
+                    <button type="button" onclick="setFormat('BO7')" class="bg-black/50 border border-gray-800 py-1.5 rounded text-xs font-bold text-gray-300 hover:border-red-500">BO7</button>
+                </div>
+                <input type="text" id="scrimFormatInput" placeholder="Sila pilih di atas atau taip (e.g. BO3 / BO5)" class="w-full bg-black/50 border border-gray-800 rounded p-2.5 text-sm text-white focus:outline-none focus:border-red-500">
+            </div>
+
+            <div>
+                <label class="block text-xs font-bold text-gray-400 mb-1">⭐ AVERAGE (STARS / RANK) *</label>
+                <input type="text" id="scrimAverageInput" placeholder="Contoh: Average 150+ Stars / Mythic Immortal" class="w-full bg-black/50 border border-gray-800 rounded p-2.5 text-sm text-white focus:outline-none focus:border-red-500">
+                <p class="text-[10px] text-yellow-500 mt-1">⚡ Requirement standard MMS Esports: 100+ Stars ke atas.</p>
+            </div>
+        </form>
+    </div>
+
+    <!-- PREVIEW & WHATSAPP SECTION -->
+    <div class="bg-esports-card/90 backdrop-blur-md p-4 rounded-xl border border-yellow-600/40 shadow-lg space-y-3">
+        <div class="flex justify-between items-center">
+            <h2 class="text-yellow-500 font-bold font-rajdhani flex items-center gap-2">
+                <i class="fab fa-whatsapp text-green-500"></i> FORMAT DM WHATSAPP
+            </h2>
+            <span class="bg-yellow-500/20 text-yellow-400 text-[10px] px-2 py-0.5 rounded font-mono">AUTO SYNC</span>
+        </div>
+
+        <!-- TEXTAREA PREVIEW -->
+        <textarea id="previewText" readonly rows="8" class="w-full bg-black/70 border border-gray-800 rounded p-3 text-xs font-mono text-gray-300 focus:outline-none resize-none"></textarea>
+
+        <!-- BUTANG HANTAR WHATSAPP -->
+        <button type="button" onclick="sendToWhatsApp()" class="w-full bg-emerald-500 hover:bg-emerald-600 text-black font-extrabold py-3 rounded-lg flex items-center justify-center gap-2 text-sm transition shadow-lg shadow-emerald-900/30">
+            <i class="fab fa-whatsapp text-lg"></i> HANTAR ORDER KE WHATSAPP
+        </button>
+
+        <!-- BUTANG SALIN TEKS -->
+        <button type="button" onclick="copyFormatText()" class="w-full bg-gray-800 hover:bg-gray-700 text-gray-200 font-bold py-2.5 rounded-lg text-xs flex items-center justify-center gap-2 transition">
+            <i class="far fa-copy"></i> SALIN TEKS FORMAT SCRIM
+        </button>
+    </div>
+
+    <!-- FOOTER DIRECT DM -->
+    <div class="mt-4 p-4 text-center border border-red-900/30 rounded-xl bg-black/60 backdrop-blur-md">
+        <p class="text-xs text-gray-400">DIRECT DM WHATSAPP CONTACT</p>
+        <p class="text-xl font-bold text-red-500 font-rajdhani my-1"><i class="fas fa-phone-alt text-sm mr-1"></i> 0178153522</p>
+        <a href="https://wa.me/60178153522" target="_blank" class="text-xs text-red-400 underline hover:text-red-300">Klik sini untuk terus chat 0178153522 →</a>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC & ANIMASI -->
+    <script>
+        // Animasi Canvas Particles/Grid Background
+        const canvas = document.getElementById('bgCanvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        for (let i = 0; i < 40; i++) {
+            particles.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                radius: Math.random() * 2 + 1,
+                color: Math.random() > 0.5 ? '#FF0B3A' : '#D4AF37',
+                vx: (Math.random() - 0.5) * 0.8,
+                vy: (Math.random() - 0.5) * 0.8
+            });
+        }
+
+        function animateBg() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw grid
+            ctx.strokeStyle = 'rgba(255, 11, 58, 0.05)';
+            ctx.lineWidth = 1;
+            const gridSize = 40;
+            for (let x = 0; x < canvas.width; x += gridSize) {
+                ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, canvas.height); ctx.stroke();
+            }
+            for (let y = 0; y < canvas.height; y += gridSize) {
+                ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(canvas.width, y); ctx.stroke();
+            }
+
+            // Draw particles
+            particles.forEach(p => {
+                p.x += p.vx;
+                p.y += p.vy;
+
+                if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                ctx.fillStyle = p.color;
+                ctx.fill();
+            });
+
+            requestAnimationFrame(animateBg);
+        }
+        animateBg();
+
+        // Borang Logic
+        const teamNameInput = document.getElementById('teamNameInput');
+        const scrimTimeInput = document.getElementById('scrimTimeInput');
+        const scrimFormatInput = document.getElementById('scrimFormatInput');
+        const scrimAverageInput = document.getElementById('scrimAverageInput');
+        const previewText = document.getElementById('previewText');
+
+        function setFormat(val) {
+            scrimFormatInput.value = val;
+            updatePreview();
+        }
+
+        function updatePreview() {
+            const team = teamNameInput.value.trim() || '____';
+            const time = scrimTimeInput.value.trim() || '____';
+            const format = scrimFormatInput.value.trim() || '____';
+            const average = scrimAverageInput.value.trim() || '____';
+
+            const formattedMessage = `🔥 *SCRIM ORDER BY MMS ESPORTS MALAYSIA* 🔥\n👑 *SPONSORED BY MIFZAL* 👑\n\n📌 *NAME TEAM:* ${team}\n⏰ *TIME:* ${time}\n⚔️ *FORMAT:* ${format}\n⭐ *AVERAGE:* ${average}\n\n📲 *DM WHATSAPP:* SUPERBRAIN`;
+
+            if (previewText) {
+                previewText.value = formattedMessage;
+            }
+        }
+
+        function sendToWhatsApp() {
+            const team = teamNameInput.value.trim();
+            const time = scrimTimeInput.value.trim();
+            const format = scrimFormatInput.value.trim();
+            const average = scrimAverageInput.value.trim();
+
+            if (!team || !time || !format || !average) {
+                alert("Sila lengkapkan semua maklumat borang!");
+                return;
+            }
+
+            const rawText = `🔥 *SCRIM ORDER BY MMS ESPORTS MALAYSIA* 🔥\n👑 *SPONSORED BY MIFZAL* 👑\n\n📌 *NAME TEAM:* ${team}\n⏰ *TIME:* ${time}\n⚔️ *FORMAT:* ${format}\n⭐ *AVERAGE:* ${average}\n\n📲 *DM WHATSAPP:* SUPERBRAIN`;
+
+            const encodedText = encodeURIComponent(rawText);
+            window.location.href = `https://wa.me/60178153522?text=${encodedText}`;
+        }
+
+        function copyFormatText() {
+            previewText.select();
+            navigator.clipboard.writeText(previewText.value);
+            alert("Format SCRIM berjaya disalin!");
+        }
+
+        [teamNameInput, scrimTimeInput, scrimFormatInput, scrimAverageInput].forEach(input => {
+            if (input) {
+                input.addEventListener('input', updatePreview);
+                input.addEventListener('change', updatePreview);
+            }
+        });
+
+        updatePreview();
+    </script>
+</body>
+    </html>
+    
+                          
