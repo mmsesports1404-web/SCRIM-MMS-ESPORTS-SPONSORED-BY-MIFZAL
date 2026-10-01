@@ -318,8 +318,243 @@
 
         updatePreview();
     </script>
-
-  <!-- WADAH HALAMAN OPEN TRYOUT -->
+    
+<!-- WADAH HALAMAN OPEN TRYOUT -->
     <div id="tryout-page" class="page-section" style="display: none;">
-        <!-- Tulis atau tampal isi kandungan tryout kamu di sini -->
+        <!-- TAMPAL KOD TRYOUT YANG KAMU SALIN TADI DI SINI -->
     </div>
+
+    <!-- Menu Navigasi Muka Surat (Atas) -->
+  <nav class="flex justify-center gap-4 mb-6 p-3 bg-gray-900/80 rounded-xl border border-red-600/50 backdrop-blur-sm" style="display: flex; justify-content: center; gap: 15px; padding: 12px; background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(239, 68, 68, 0.5); border-radius: 12px; margin-bottom: 20px;">
+    <a href="index.html" style="color: #ffffff; font-weight: bold; text-decoration: none;">🏠 SCRIM MAIN PAGE</a>
+    <span style="color: #64748b;">|</span>
+    <a href="tryout.html" style="color: #ef4444; font-weight: bold; text-decoration: none;">🔥 OPEN TRYOUT</a>
+  </nav>
+
+  <canvas id="bg-canvas"></canvas>
+
+  <div class="container">
+    <header>
+      <div class="logo-container">
+        <img src="ManaManaSandar%2020260825_220527.jpg" alt="Logo MMS Esports" style="width: 65px; height: 65px; border-radius: 50%; object-fit: cover; border: 2px solid #ef4444;">
+        <div>
+          <div class="brand-title">MMS ESPORTS</div>
+          <div class="brand-sub">MOBILE LEGENDS</div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="slogan">ONE TEAM • ONE DREAM</div>
+      <h1 class="main-title">
+        MMS ESPORTS
+        <span>OPEN TRYOUT</span>
+      </h1>
+      <div class="badge-star">
+        <h3>REQUIREMENTS: AVERAGE 150+ STARS</h3>
+      </div>
+    </section>
+
+    <h2 class="section-title">PLAYER CRITERIA</h2>
+    <div class="criteria-grid">
+      <div class="criteria-card">
+        <div class="criteria-icon">🇲🇾</div>
+        <div class="criteria-text">
+          <h4>Warganegara</h4>
+          <p style="color: var(--text-dim);">Malaysia Only</p>
+        </div>
+      </div>
+
+      <div class="criteria-card">
+        <div class="criteria-icon">⭐</div>
+        <div class="criteria-text">
+          <h4>Rank Requirements</h4>
+          <p style="color: var(--text-dim);">Average 150+ Stars</p>
+        </div>
+      </div>
+
+      <div class="criteria-card">
+        <div class="criteria-icon">⚔️</div>
+        <div class="criteria-text">
+          <h4>Gameplay Skill</h4>
+          <p style="color: var(--text-dim);">Good Macro & Micro</p>
+        </div>
+      </div>
+
+      <div class="criteria-card">
+        <div class="criteria-icon">🦸🏻‍♂️</div>
+        <div class="criteria-text">
+          <h4>Hero Pool</h4>
+          <p style="color: var(--text-dim);">High Hero Pool</p>
+        </div>
+      </div>
+
+      <div class="criteria-card">
+        <div class="criteria-icon">🤝</div>
+        <div class="criteria-text">
+          <h4>Commitment</h4>
+          <p style="color: var(--text-dim);">Committed & Teamwork</p>
+        </div>
+      </div>
+
+      <div class="criteria-card">
+        <div class="criteria-icon">⏰</div>
+        <div class="criteria-text">
+          <h4>Discipline</h4>
+          <p style="color: var(--text-dim);">Discipline & Punctual</p>
+        </div>
+      </div>
+
+      <div class="criteria-card">
+        <div class="criteria-icon">🗣️</div>
+        <div class="criteria-text">
+          <h4>Communication</h4>
+          <p style="color: var(--text-dim);">Discord & Mic On</p>
+        </div>
+      </div>
+
+      <div class="criteria-card">
+        <div class="criteria-icon">🔥</div>
+        <div class="criteria-text">
+          <h4>Attitude</h4>
+          <p style="color: var(--text-dim);">Respect Players & Mgmt</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <h2 style="font-family:'Orbitron'; text-align:center; color:#fff; margin-bottom:20px;">BORANG PENDAFTARAN</h2>
+      <form id="tryoutForm">
+        <div class="form-group">
+          <label>NAME:</label>
+          <input type="text" id="name" class="form-control" placeholder="Masukkan nama anda" required>
+        </div>
+        <div class="form-group">
+          <label>ROLE:</label>
+          <select id="role" class="form-control" required>
+            <option value="">-- Pilih Role --</option>
+            <option value="Jungler">Jungler</option>
+            <option value="Roamer">Roamer</option>
+            <option value="Mid Laner">Mid Laner</option>
+            <option value="Gold Laner">Gold Laner</option>
+            <option value="EXP Laner">EXP Laner</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>AVERAGE STARS:</label>
+          <input type="number" id="average" class="form-control" placeholder="Contoh: 150" required>
+        </div>
+        <div class="form-group">
+          <label>3 FAV HEROES:</label>
+          <input type="text" id="favHeroes" class="form-control" placeholder="Contoh: Ling, Fanny, Hayabusa" required>
+        </div>
+        <div class="form-group">
+          <label>REGION:</label>
+          <input type="text" id="region" class="form-control" placeholder="Contoh: Selangor / KL" required>
+        </div>
+        <button type="submit" class="btn-submit">
+          <i class="fa-brands fa-whatsapp"></i> HANTAR KE WHATSAPP
+        </button>
+      </form>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 MMS ESPORTS. All Rights Reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Particle background canvas
+    const canvas = document.getElementById('bg-canvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 3 + 1;
+        this.speedY = Math.random() * 1 + 0.5;
+        this.color = `rgba(255, ${Math.floor(Math.random() * 50)}, 60, ${Math.random() * 0.5 + 0.2})`;
+      }
+      update() {
+        this.y -= this.speedY;
+        if (this.y < 0) {
+          this.y = canvas.height;
+          this.x = Math.random() * canvas.width;
+        }
+      }
+      draw() {
+        ctx.fillStyle = this.color;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    for (let i = 0; i < 60; i++) {
+      particles.push(new Particle());
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animate);
+    }
+    animate();
+
+    // WhatsApp Form Handling
+    document.getElementById('tryoutForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const role = document.getElementById('role').value;
+      const average = document.getElementById('average').value;
+      const favHeroes = document.getElementById('favHeroes').value;
+      const region = document.getElementById('region').value;
+
+      const message = `🔥 *MMS ESPORTS OPEN TRYOUT REGISTRATION* 🔥%0A` +
+      `👑 *SPONSORED BY MIFZAL* 👑%0A%0A` +
+      `👤 *NAME:* ${encodeURIComponent(name)}%0A` +
+      `🎮 *ROLE:* ${encodeURIComponent(role)}%0A` +
+      `⭐ *AVERAGE:* ${encodeURIComponent(average)} Stars%0A` +
+      `⚔️ *3 FAV HEROES:* ${encodeURIComponent(favHeroes)}%0A` +
+      `🇲🇾 *REGION:* ${encodeURIComponent(region)}`;
+
+      const phone = "60178153522";
+      window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
+    });
+  </script>
+
+    <script>
+    function showPage(pageId) {
+        // Sembunyikan semua halaman
+        const pages = document.querySelectorAll('.page-section');
+        pages.forEach(page => {
+            page.style.display = 'none';
+        });
+
+        // Tampilkan halaman yang dipilih
+        const activePage = document.getElementById(pageId);
+        if (activePage) {
+            activePage.style.display = 'block';
+        }
+        
+        // Geser ke atas otomatis saat pindah menu
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    </script>
+
+    <button onclick="showPage('home-page')">Home</button>
+<button onclick="showPage('scrim-page')">Scrim</button>
+<button onclick="showPage('tryout-page')">Tryout</button>
